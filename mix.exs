@@ -9,7 +9,8 @@ defmodule Goatfi.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "Goatfi",
-      description: "TODO: write a proper description",
+      description:
+        "Captive portal detection and polite click-through acceptance for Elixir and Nerves devices",
       docs: docs(),
       package: package(),
       aliases: aliases(),
@@ -20,7 +21,7 @@ defmodule Goatfi.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :inets, :ssl, :public_key]
     ]
   end
 
@@ -35,7 +36,7 @@ defmodule Goatfi.MixProject do
     [
       name: :goatfi,
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/TODO/goatfi"}
+      links: %{"GitHub" => "https://github.com/lawik/goatfi"}
     ]
   end
 
